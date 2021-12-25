@@ -8,8 +8,8 @@ const ProductProvider = ({ children }) => {
   console.log("products:", products);
 
   useEffect(() => {
-    axios("https://fakestoreapi.com/products").then((response) =>
-      setProducts(response.data)
+    axios("https://fakestore-react.herokuapp.com/api/products").then(
+      (response) => setProducts(response.data)
     );
   }, []);
 
